@@ -34,6 +34,8 @@ namespace Database2Administrator
             dgvAthletes.CellEndEdit += dgvAthletes_CellEndEdit;
             dgvAthletes.SelectionChanged += dgvAthletes_SelectionChanged;
 
+            this.SetStyle(System.Windows.Forms.ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = System.Drawing.Color.Transparent;
         }
 
 
@@ -132,6 +134,13 @@ namespace Database2Administrator
             olympic.Twitter = row.Cells[3].Value.ToString();
             olympic.Facebook = row.Cells[4].Value.ToString();
             olympic.Logo = row.Cells[5].Value.ToString();
+            if (!int.TryParse(row.Cells[6].Value.ToString(), out int year))
+            {
+                MessageBox.Show("Invalid year");
+                return olympic;
+            }
+
+            olympic.Year = year;
 
             return olympic;
         }

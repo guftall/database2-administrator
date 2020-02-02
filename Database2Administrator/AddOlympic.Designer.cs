@@ -54,6 +54,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtName
@@ -272,11 +274,29 @@
             this.label12.TabIndex = 28;
             this.label12.Text = "Happen Country:";
             // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(94, 119);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(119, 20);
+            this.txtYear.TabIndex = 31;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Year:";
+            // 
             // AddOlympic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 382);
+            this.Controls.Add(this.txtYear);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtTourchCountry);
@@ -339,5 +359,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCountry;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.Label label13;
     }
 }

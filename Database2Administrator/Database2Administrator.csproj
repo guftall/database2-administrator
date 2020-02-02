@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Dto\Athlete.cs" />
     <Compile Include="Dto\Olympic.cs" />
+    <Compile Include="Dto\Sport.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="ResidencyCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidencyCost.Designer.cs">
+      <DependentUpon>ResidencyCost.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAthlete.resx">
       <DependentUpon>AddAthlete.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,7 +98,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResidencyCost.resx">
+      <DependentUpon>ResidencyCost.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="olympicDataSet.xsc">
       <DependentUpon>olympicDataSet.xsd</DependentUpon>
     </None>
@@ -115,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Olympic_rings_without_rims.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

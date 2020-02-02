@@ -406,6 +406,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.BackgroundImage = global::Database2Administrator.Properties.Resources._1200px_Olympic_rings_without_rims_svg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(941, 415);
             this.Controls.Add(this.btnRefreshList);
             this.Controls.Add(this.btnAddOlympic);
@@ -413,6 +415,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tabControl1);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Olympic Administrator";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -42,12 +42,14 @@
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.cbSport = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(333, 226);
+            this.btnCancel.Location = new System.Drawing.Point(311, 264);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 0;
@@ -57,7 +59,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(414, 226);
+            this.btnSave.Location = new System.Drawing.Point(392, 264);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 1;
@@ -169,11 +171,31 @@
             this.dtpBirthdate.Size = new System.Drawing.Size(200, 20);
             this.dtpBirthdate.TabIndex = 12;
             // 
+            // cbSport
+            // 
+            this.cbSport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSport.FormattingEnabled = true;
+            this.cbSport.Location = new System.Drawing.Point(70, 226);
+            this.cbSport.Name = "cbSport";
+            this.cbSport.Size = new System.Drawing.Size(121, 21);
+            this.cbSport.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Sport:";
+            // 
             // AddAthlete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 269);
+            this.ClientSize = new System.Drawing.Size(483, 299);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbSport);
             this.Controls.Add(this.dtpBirthdate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
@@ -188,6 +210,7 @@
             this.Controls.Add(this.btnCancel);
             this.Name = "AddAthlete";
             this.Text = "AddAthlete";
+            this.Load += new System.EventHandler(this.AddAthlete_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -211,5 +234,7 @@
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.DateTimePicker dtpBirthdate;
+        private System.Windows.Forms.ComboBox cbSport;
+        private System.Windows.Forms.Label label6;
     }
 }

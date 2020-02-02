@@ -35,6 +35,12 @@ namespace Database2Administrator
             olympic.Facebook = txtFacebook.Text.ToString();
             olympic.Logo = txtLogo.Text.ToString();
             olympic.Country = txtCountry.Text.ToString();
+            if (!int.TryParse(txtYear.Text.ToString(), out int year))
+            {
+                MessageBox.Show("Invalid Year");
+                return;
+            }
+            olympic.Year = year;
 
             olympic.TorchImage = txtTourchImage.Text.ToString();
 

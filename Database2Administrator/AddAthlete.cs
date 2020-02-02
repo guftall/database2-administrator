@@ -35,10 +35,27 @@ namespace Database2Administrator
                 athlete.Gender = 2;
             }
 
-            repository.InsertAthlete(athlete);
+            var sport = new Sport();
+            sport.Name = cbSport.SelectedItem.ToString();
+
+            repository.InsertAthlete(athlete, sport);
 
             MessageBox.Show("Athlete inserted");
             this.Close();
         }
+
+        private void AddAthlete_Load(object sender, EventArgs e)
+        {
+            cbSport.Items.Clear();
+
+            var sports = repository.ReadSports();
+
+            foreach (var sport in sports)
+            {
+                cbSport.Items.Add(sport.Name);
+            }
+            cbSport.SelectedIndex = 0;
+        }
+
     }
 }
